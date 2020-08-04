@@ -60,7 +60,7 @@ spring:
           predicates:
             - Path=/deliveries/**
         - id: mapage
-          uri: http://mapage:8080
+          uri: http://mypage:8080
           predicates:
             - Path= /mypages/**
         - id: product
