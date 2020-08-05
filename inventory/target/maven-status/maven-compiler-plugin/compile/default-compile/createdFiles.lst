@@ -1,0 +1,15 @@
+maskShop3\ProductModified.class
+maskShop3\config\kafka\KafkaProcessor.class
+maskShop3\PolicyHandler.class
+maskShop3\OrderCanceled.class
+maskShop3\InventoryController.class
+maskShop3\InventoryRepository.class
+maskShop3\DeliveryRegisterd.class
+maskShop3\InventoryApplication.class
+maskShop3\DeliveryCanceled.class
+maskShop3\Inventory.class
+maskShop3\InvRegisterd.class
+maskShop3\AbstractEvent$1.class
+maskShop3\Registerd.class
+maskShop3\AbstractEvent.class
+maskShop3\InvUpdated.class

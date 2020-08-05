@@ -6,6 +6,7 @@ public class Registerd extends AbstractEvent {
     private Long id;
     private Long productId;
     private String productName;
+    private Integer invQty; // 0803 lys 추가
 
     public Long getId() {
         return id;
@@ -27,5 +28,14 @@ public class Registerd extends AbstractEvent {
 
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    // 0803 lys 추가
+    public Integer getInvQty() {
+        return invQty;
+    }
+    // 0803 lys 추가
+    public void setInvQty(Integer invQty) {
+        this.invQty = invQty;
     }
 }

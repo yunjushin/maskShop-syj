@@ -21,7 +21,6 @@ public class Order {
 
     @PostPersist
     public void onPostPersist(){
-        System.out.println("onPostPersist ==================================");
 
         // order -> delivery create
         maskShop3.external.Delivery delivery = new maskShop3.external.Delivery();
@@ -30,7 +29,6 @@ public class Order {
         delivery.setProductId(getProductId());
         delivery.setInvQty(getQty());
         delivery.setId(getId()+10000);
-
         OrderApplication.applicationContext.getBean(maskShop3.external.DeliveryService.class).update(delivery);
 
         Ordered ordered = new Ordered();

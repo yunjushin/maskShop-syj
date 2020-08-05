@@ -1,0 +1,12 @@
+maskShop3\ProductModified.class
+maskShop3\config\kafka\KafkaProcessor.class
+maskShop3\PolicyHandler.class
+maskShop3\external\InventoryService.class
+maskShop3\Product.class
+maskShop3\external\Inventory.class
+maskShop3\ProductApplication.class
+maskShop3\ProductController.class
+maskShop3\ProductRepository.class
+maskShop3\AbstractEvent$1.class
+maskShop3\Registerd.class
+maskShop3\AbstractEvent.class

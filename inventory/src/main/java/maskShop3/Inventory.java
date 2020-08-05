@@ -14,6 +14,18 @@ public class Inventory {
     private Long productId;
     private Integer invQty;
 
+    @PostPersist
+    public void onPrePersist(){
+
+        InvRegisterd invRegisterd = new InvRegisterd();
+
+        System.out.println("##### INVENTORY onPrePersist=======================" +invRegisterd.toJson());
+
+        BeanUtils.copyProperties(this, invRegisterd);
+        invRegisterd.publishAfterCommit();
+
+    }
+
     @PostUpdate
     public void onPostUpdate(){
 
