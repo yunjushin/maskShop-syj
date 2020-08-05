@@ -72,7 +72,7 @@ spring:
           predicates:
             - Path=/inventories/** 
         - id: adminPage
-          uri: http://adminPage:8080
+          uri: http://adminpage:8080
           predicates:
             - Path=/adminPages/**
       globalcors:
