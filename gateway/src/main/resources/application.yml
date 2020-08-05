@@ -31,7 +31,7 @@ spring:
         - id: adminPage
           uri: http://localhost:8086
           predicates:
-            - Path=/adminPages/**
+            - Path=/adminpages/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -74,7 +74,7 @@ spring:
         - id: adminPage
           uri: http://adminpage:8080
           predicates:
-            - Path=/adminPages/**
+            - Path=/adminpages/**
       globalcors:
         corsConfigurations:
           '[/**]':
