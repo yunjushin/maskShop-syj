@@ -63,15 +63,26 @@ public class PolicyHandler{
     @StreamListener(KafkaProcessor.INPUT)
     public void wheneverProductModified_Change(@Payload ProductModified productModified){
 
-        if(productModified.isMe()) {
-            System.out.println("##### listener INVENTORY MODIFIED  : " + productModified.toJson());
+        
+        Inventory inventory = new Inventory();
+        if(inventoryRepository.findByProductId(productModified.getProductId()).isPresent()) {
 
-            Inventory inventory = new Inventory();
+               System.out.println("##### listener INVENTORY MODIFIED  : " + productModified.toJson());
 
-            inventory = inventoryRepository.findByProductId(productModified.getProductId()).get();
+
+                inventory = inventoryRepository.findByProductId(productModified.getProductId()).get();
+                inventory.setInvQty(productModified.getInvQty());
+                inventoryRepository.save(inventory);
+            }
+
+        else {
+            System.out.println("##### listener INVENTORY INSERT ======================");
+
+            inventory.setProductId(productModified.getProductId());
             inventory.setInvQty(productModified.getInvQty());
             inventoryRepository.save(inventory);
         }
+
     }
 
 }
